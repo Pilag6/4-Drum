@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.drum {
+    background-image: url(../drum-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-gral {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title,
+.keyboard {
+    font-family: "Londrina Solid", cursive;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0px 0px 20px #260e30;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #260e30;
+}
+
+.keyboard {
+    top: 30%;
+    border-bottom: 0;
+    color: #260e30;
+    text-shadow: 0px 0px 20px #ffc600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+    margin: 10px;
+    margin-bottom: 10px;
+    font-family: "Londrina Solid", cursive;
+    border: 5px solid #fff;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 40%;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 0px 10px 4px;
+    transition: all 0.07s;
+}
+
+.playing {
+    transform: scale(1.2);
+    border-color: #ffc600;
+    box-shadow: 0 0 20px #ffc600;
+}
+
+kbd {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffc600;
+    text-shadow: 0px 0px 5px #260e30;
+    margin-bottom: 7px;
+}
+
+.sound {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #260e30;
+    text-shadow: 0px 0px 5px #fff;
+    padding-bottom: 5px;
+}
+
+.credits {
+    color: #260e30;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #ffc600;
+    margin-top: 100px;
+    font-family: "Londrina Solid", cursive;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+}
+@media (max-width: 990px) {
+    .title-gral {
+        margin-top: 50px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .keyboard {
+        font-size: 30px;
+    }
+
+    .credits {
+        font-size: 20px;
+    }
+
+    .key {
+        width: 100px;
+        height: 100px;
+    }
+
+    kbd {
+        font-size: 2.5rem;
+    }
+
+    .sound {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .key {
+        width: 80px;
+        height: 80px;
+    }
+
+    kbd {
+        font-size: 2rem;
+    }
+
+    .sound {
+        font-size: 1rem;
+    }
+}
