@@ -6,42 +6,44 @@
     box-sizing: border-box;
 }
 
-.drum {
+:root {
+    --yellow: #ffc600;
+    --purple: #260e30;
+}
+
+body {
+    font-family: "Londrina Solid", cursive;
+    background-color: var(--purple);
+    color: #fff;
     background-image: url(../drum-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    min-height: 100vh;
+}
+
+.drum {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+    gap: 1.5rem;
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .title-gral {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-
-.title,
-.keyboard {
-    font-family: "Londrina Solid", cursive;
+    text-align: center;
+    border-bottom: 2px dashed var(--purple);
     font-size: 50px;
-    color: #fff;
-    text-shadow: 0px 0px 20px #260e30;
-    padding-bottom: 20px;
-    border-bottom: 2px dashed #260e30;
+    text-shadow: 0px 0px 20px var(--purple);
+    margin-bottom: 1.5rem;
 }
 
 .keyboard {
-    top: 30%;
-    border-bottom: 0;
-    color: #260e30;
-    text-shadow: 0px 0px 20px #ffc600;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-size: 40px;
+    color: var(--purple);
+    text-shadow: 0px 0px 20px var(--yellow);
+    padding: 1.2rem 0;
 }
 
 .box {
@@ -49,6 +51,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .key {
@@ -58,10 +61,7 @@
     flex-direction: column;
     width: 140px;
     height: 140px;
-    margin: 5px;
-    font-family: "Londrina Solid", cursive;
     border: 2px solid #fff;
-    background-color: transparent;
     backdrop-filter: blur(10px);
     border-radius: 8%;
     box-shadow: rgba(255, 255, 255, 0.56) 0px 0px 10px 4px;
@@ -70,36 +70,33 @@
 
 .playing {
     transform: scale(1.2);
-    border-color: #ffc600;
-    box-shadow: 0 0 20px #ffc600;
+    border-color: var(--yellow);
+    box-shadow: 0 0 20px var(--yellow);
 }
 
 kbd {
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffc600;
-    text-shadow: 0px 0px 5px #260e30;
+    color: var(--yellow);
+    text-shadow: 0px 0px 5px var(--purple);
     margin-bottom: 7px;
 }
 
 .sound {
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #260e30;
+    color: var(--purple);
     text-shadow: 0px 0px 5px #fff;
     padding-bottom: 5px;
 }
 
 .credits {
-    color: #260e30;
+    color: var(--purple);
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 0px 0px 10px #ffc600;
+    text-shadow: 0px 0px 10px var(--yellow);
     margin-top: 50px;
-    font-family: "Londrina Solid", cursive;
 }
 
 
@@ -112,36 +109,30 @@ kbd {
 }
 @media (max-width: 990px) {
     .title-gral {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
-    .title {
-        font-size: 40px;
+    .drum {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .drum {
+        padding-top: 0rem;
+    }
+
+    .title-gral {
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 0rem;
     }
 
     .keyboard {
         font-size: 30px;
     }
 
-    .credits {
-        font-size: 20px;
-    }
-
-    .key {
-        width: 100px;
-        height: 100px;
-    }
-
-    kbd {
-        font-size: 2.5rem;
-    }
-
-    .sound {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 600px) {
     .key {
         width: 80px;
         height: 80px;
@@ -153,5 +144,10 @@ kbd {
 
     .sound {
         font-size: 1rem;
+    }
+
+    .credits {
+        margin-top: auto;
+        padding-bottom: 20px;
     }
 }
